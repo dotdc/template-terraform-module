@@ -12,13 +12,19 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
 
-  # Markdown linter
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.38.0
+  # Terraform hooks
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.84.0
     hooks:
-      - id: markdownlint
+      - id: terraform_fmt
+      - id: terraform_validate
+      - id: terraform_docs
         args:
-          - "--disable=MD013"
+          - '--args=--lockfile=false'
+      - id: terraform_tflint
+        args:
+          - --args=--module
+          # - --args=--config=__GIT_WORKING_DIR__/.tflint.hcl
 
   # Typos
   - repo: https://github.com/crate-ci/typos
