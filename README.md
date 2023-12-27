@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Terraform module template.
+This is just a Terraform module template.
 
 ## Terraform Docs
 
