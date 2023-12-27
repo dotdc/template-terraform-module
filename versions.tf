@@ -1,7 +1,7 @@
 terraform {
   # Terraform version
   # Doc: https://github.com/hashicorp/terraform
-  required_version = ">= 1.6.4"
+  required_version = ">= 1.6.6"
 
   required_providers {
     # Doc: https://registry.terraform.io/providers/hashicorp/helm
